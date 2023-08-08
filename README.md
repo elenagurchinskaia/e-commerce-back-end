@@ -23,11 +23,7 @@ Furthermore, the API offers functionality for POST, PUT, and DELETE routes throu
 
 ## Installation
 
-To install the required dependencies, run the following command:
-
-```
-npm i
-```
+N/A
 
 ## Usage
 
@@ -35,11 +31,7 @@ This application offers a user-friendly API for efficient database management. C
 
 ## Tests
 
-To run tests, use the following commands:
-
-```
-npm test
-```
+N/A
 
 ## Contributing
 
