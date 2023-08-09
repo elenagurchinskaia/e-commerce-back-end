@@ -13,10 +13,10 @@ Furthermore, the API offers functionality for POST, PUT, and DELETE routes throu
 ## Table of Contents
 
 - [Description](#description)
-- [Video](#video)
+- [Video](#walk-through-video)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [License](#e-commerce-back-end)
 - [Contributing](#contributing)
 - [Questions](#questions)
 
