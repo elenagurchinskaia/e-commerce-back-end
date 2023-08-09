@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Tag, Product, ProductTag } = require("../../models");
 
 // The `/api/tags` endpoint
-
+// ------------------------------------------------- GET All Router ------------------------------------------------ //
 router.get("/", async (req, res) => {
   try {
     // find all tags
@@ -15,12 +15,13 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// ------------------------------------------------- GET One by ID Router ------------------------------------------------ //
 router.get("/:id", async (req, res) => {
   try {
     // find a single tag by its `id`
     // be sure to include its associated Product data
-    const tagData = await Tag.findByPk({
+    const tagData = await Tag.findOne({
+      where: { id: req.params.id },
       include: [{ model: Product }],
     });
     if (!tagData) {
@@ -32,7 +33,7 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// ------------------------------------------------- POST Router ------------------------------------------------ //
 router.post("/", async (req, res) => {
   try {
     // create a new tag
@@ -42,7 +43,7 @@ router.post("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// ------------------------------------------------- PUT Router ------------------------------------------------ //
 router.put("/:id", async (req, res) => {
   try {
     // update a tag's name by its `id` value
@@ -56,7 +57,7 @@ router.put("/:id", async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// ------------------------------------------------- DELETE Router ------------------------------------------------ //
 router.delete("/:id", async (req, res) => {
   try {
     // delete on tag by its `id` value

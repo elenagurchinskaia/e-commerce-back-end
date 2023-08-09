@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Product, Category, Tag, ProductTag } = require("../../models");
 
 // The `/api/products` endpoint
-
+// ------------------------------------------------- GET All Router ------------------------------------------------ //
 // get all products
 router.get("/", async (req, res) => {
   // find all products
@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// ------------------------------------------------- GET One by ID Router ------------------------------------------------ //
 // get one product
 router.get("/:id", async (req, res) => {
   // find a single product by its `id`
@@ -59,7 +59,7 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// ------------------------------------------------- POST Router ------------------------------------------------ //
 // create new product
 router.post("/", (req, res) => {
   /* req.body should look like this...
@@ -92,10 +92,11 @@ router.post("/", (req, res) => {
       res.status(400).json(err);
     });
 });
-
+// ------------------------------------------------- PUT Router ------------------------------------------------ //
 // update product
 router.put("/:id", (req, res) => {
   // update product data
+  // console.log(req.body);
   Product.update(req.body, {
     where: {
       id: req.params.id,
@@ -128,7 +129,7 @@ router.put("/:id", (req, res) => {
           ]);
         });
       }
-
+      console.log(product);
       return res.json(product);
     })
     .catch((err) => {
@@ -136,7 +137,7 @@ router.put("/:id", (req, res) => {
       res.status(400).json(err);
     });
 });
-
+// ------------------------------------------------- DELETE Router ------------------------------------------------ //
 router.delete("/:id", async (req, res) => {
   // delete one product by its `id` value
   try {
