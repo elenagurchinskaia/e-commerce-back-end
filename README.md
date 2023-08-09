@@ -12,14 +12,17 @@ Furthermore, the API offers functionality for POST, PUT, and DELETE routes throu
 
 ## Table of Contents
 
-- [Code - Snippet](#code-snippet)
+- [Description](#description)
+- [Video](#video)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
 - [Questions](#questions)
 
-## Code Snippets
+## Walk Through Video
+
+[Walk Through Video](https://drive.google.com/file/d/1bZs98wQYZlGgBpsNXHMMITmFWDSjh9QA/view)
 
 ## Installation
 
@@ -28,10 +31,6 @@ N/A
 ## Usage
 
 This application offers a user-friendly API for efficient database management. Connect to your MySQL database using Sequelize, and seamlessly interact with categories, products, and tags. Use Insomnia Core to explore, modify, and delete data via intuitive GET, POST, PUT, and DELETE routes. Simplify database administration and data manipulation with ease.
-
-## Tests
-
-N/A
 
 ## Contributing
 
